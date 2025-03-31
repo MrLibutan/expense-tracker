@@ -27,3 +27,68 @@ header {
   font-weight: bold;
   font-size: 32px;
 }
+
+main {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.expense-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 50px;
+  height: 460px;
+}
+
+button {
+  width: 60%;
+  padding: 8px 12px;
+  font-size: 20px;
+  color: #fff;
+  margin: 12px auto 0 auto;
+  border: 0;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.expense-container {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.input-field label {
+  font-size: 18px;
+}
+
+.input-field input[type="text"],
+.input-field input[type="number"],
+.input-field input[type="date"] {
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #cccccc;
+}
+
+.expense-container button {
+  background-color: #33b249;
+}
+
+.total-expense {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
