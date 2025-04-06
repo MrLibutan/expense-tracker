@@ -177,7 +177,7 @@ button {
 }
 
 .delete-icon {
-  fill: #d11a2a;
+  stroke: #d11a2a;
 }
 
 .delete-icon:hover,
