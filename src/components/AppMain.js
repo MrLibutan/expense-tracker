@@ -3,7 +3,10 @@ import ExpenseContainer from "./ExpenseContainer";
 import HistoryContainer from "./HistoryContainer";
 
 export default function AppMain() {
-  const [expenses, setExpenses] = useState([]);
+  const [expenses, setExpenses] = useState(function () {
+    const storedExpenses = localStorage.getItem("expenses");
+    return JSON.parse(storedExpenses);
+  });
 
   function handleAddExpense(expense) {
     setExpenses((s) => [...s, expense]);

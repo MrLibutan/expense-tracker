@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ExpenseContainer({ expenses, onAddExpense }) {
   const [date, setDate] = useState("");
@@ -16,6 +16,14 @@ export default function ExpenseContainer({ expenses, onAddExpense }) {
     (acc, expense) => acc + expense.value,
     0
   );
+
+  useEffect(
+    function () {
+      localStorage.setItem("expenses", JSON.stringify(expenses));
+    },
+    [expenses]
+  );
+
   return (
     <form
       className="expense-container"
