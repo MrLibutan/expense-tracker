@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ExpenseContainer from "./ExpenseContainer";
 import HistoryContainer from "./HistoryContainer";
 
 export default function AppMain() {
   const [expenses, setExpenses] = useState(function () {
     const storedExpenses = localStorage.getItem("expenses");
-    return JSON.parse(storedExpenses);
+    return storedExpenses ? JSON.parse(storedExpenses) : [];
   });
 
   function handleAddExpense(expense) {
@@ -19,6 +19,7 @@ export default function AppMain() {
   function handleClearExpenses() {
     setExpenses([]);
   }
+
   return (
     <main>
       <ExpenseContainer expenses={expenses} onAddExpense={handleAddExpense} />
