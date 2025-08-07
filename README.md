@@ -32,3 +32,4 @@ The app allows users to add and track their expenses, with data stored in **loca
 - Improve code readability and structure
 - Add categories or filters for expenses
 - Possibly integrate Supabase for storage and auth
+- Make the design responsive
