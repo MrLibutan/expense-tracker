@@ -4,6 +4,10 @@ This is my first React application — a simple **Expense Tracker**. I built it 
 
 The app allows users to add and track their expenses, with data stored in **localStorage** so their data will remain every time they open the app.
 
+## 🎥 Demo
+
+![Expense Tracker Demo](public/expenseTracker.gif)
+
 ---
 
 ## ✨ Tech Stack
